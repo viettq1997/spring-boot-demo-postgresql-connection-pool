@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    #hikari
+    hikari:
+      idle-timeout: 10000
+    initial-size: 5
+    max-active: 10
+    max-idle: 8
+    min-idle: 8
+    password: 1234567
+    test-on-borrow: true
+    test-on-return: true
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://127.0.0.1:5432/student
+    username: postgres
+    validation-query: SELECT 1
+  jpa:
+    hibernate:
+      #in real , not use
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        #show sql
+        format_sql: true
+    show-sql: true
